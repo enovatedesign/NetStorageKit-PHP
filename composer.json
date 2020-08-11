@@ -1,13 +1,13 @@
 {
-    "name": "akamai-open/netstorage",
+    "name": "enovate/netstorage",
     "description": "Akamai NetStorage",
     "require": {
         "php": ">=5.5",
-        "akamai-open/edgegrid-client": "^1.0.0",
         "league/flysystem": "^1.0",
         "twistor/flysystem-stream-wrapper": "^1.0",
         "ext-simplexml": "*",
-        "ext-dom": "*"
+        "ext-dom": "*",
+        "enovate/edgegrid-client": "^1.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
@@ -17,6 +17,12 @@
         "squizlabs/php_codesniffer": "^2.3",
         "dshafik/guzzlehttp-vcr": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/enovatedesign/AkamaiOPEN-edgegrid-php-client"
+        }
+    ],
     "config": {
         "platform": {
             "php": "5.5.0"
