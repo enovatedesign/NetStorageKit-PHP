@@ -7,14 +7,14 @@
         "twistor/flysystem-stream-wrapper": "^1.0",
         "ext-simplexml": "*",
         "ext-dom": "*",
-        "enovate/edgegrid-client": "^1.0"
+        "enovate/edgegrid-client": "dev-master"
     },
     "require-dev": {
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/enovatedesign/AkamaiOPEN-edgegrid-php-client"
+            "url": "git@github.com:enovatedesign/AkamaiOPEN-edgegrid-php-client.git"
         }
     ],
     "license": "Apache 2.0",

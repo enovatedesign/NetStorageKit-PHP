@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44a59ef724d1c64c92614938023e0baf",
+    "content-hash": "e458ea66617c3e35b2c976c8a10e6b64",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -60,32 +60,24 @@
         },
         {
             "name": "enovate/edgegrid-client",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/enovatedesign/AkamaiOPEN-edgegrid-php-client.git",
-                "reference": "a368473f0f73fab96ffee03ee40d2f18694ff526"
+                "reference": "c4fef0db16d8c7eecbbf9e59c8508f983f22ebaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/enovatedesign/AkamaiOPEN-edgegrid-php-client/zipball/a368473f0f73fab96ffee03ee40d2f18694ff526",
-                "reference": "a368473f0f73fab96ffee03ee40d2f18694ff526",
+                "url": "https://api.github.com/repos/enovatedesign/AkamaiOPEN-edgegrid-php-client/zipball/c4fef0db16d8c7eecbbf9e59c8508f983f22ebaf",
+                "reference": "c4fef0db16d8c7eecbbf9e59c8508f983f22ebaf",
                 "shasum": ""
             },
             "require": {
                 "akamai-open/edgegrid-auth": "^1.0.0",
                 "guzzlehttp/guzzle": "^6.1.1",
                 "league/climate": "~3.2",
-                "monolog/monolog": "^1.15",
-                "php": ">=5.5",
-                "psr/log": "^1.0"
-            },
-            "require-dev": {
-                "apigen/apigen": "^4.0.0",
-                "friendsofphp/php-cs-fixer": "^1.9",
-                "kherge/box": "^2.5",
-                "phpunit/phpunit": "~4.7",
-                "squizlabs/php_codesniffer": "^2.3"
+                "monolog/monolog": "^2",
+                "php": ">=7.3"
             },
             "bin": [
                 "bin/http"
@@ -150,9 +142,9 @@
                 "open"
             ],
             "support": {
-                "source": "https://github.com/enovatedesign/AkamaiOPEN-edgegrid-php-client/tree/1.0.0"
+                "source": "https://github.com/enovatedesign/AkamaiOPEN-edgegrid-php-client/tree/master"
             },
-            "time": "2017-09-01T07:23:52+00:00"
+            "time": "2020-08-11T08:01:21+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -548,21 +540,21 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.25.5",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
+                "reference": "f9eee5cec93dfb313a38b6b288741e84e53f02d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
-                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f9eee5cec93dfb313a38b6b288741e84e53f02d5",
+                "reference": "f9eee5cec93dfb313a38b6b288741e84e53f02d5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
+                "php": ">=7.2",
+                "psr/log": "^1.0.1"
             },
             "provide": {
                 "psr/log-implementation": "1.0.0"
@@ -570,32 +562,36 @@
             "require-dev": {
                 "aws/aws-sdk-php": "^2.4.9 || ^3.0",
                 "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
+                "elasticsearch/elasticsearch": "^6.0",
+                "graylog2/gelf-php": "^1.4.2",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
                 "php-parallel-lint/php-parallel-lint": "^1.0",
-                "phpunit/phpunit": "~4.5",
+                "phpspec/prophecy": "^1.6.1",
+                "phpunit/phpunit": "^8.5",
+                "predis/predis": "^1.1",
+                "rollbar/rollbar": "^1.3",
                 "ruflin/elastica": ">=0.90 <3.0",
-                "sentry/sentry": "^0.13",
                 "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "ext-mbstring": "Allow to work properly with unicode symbols",
+                "ext-mongodb": "Allow sending log messages to a MongoDB server (via driver)",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "sentry/sentry": "Allow sending log messages to a Sentry server"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -631,7 +627,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-23T08:35:51+00:00"
+            "time": "2020-07-23T08:41:23+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1264,7 +1260,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "enovate/edgegrid-client": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
